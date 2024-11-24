@@ -1,0 +1,289 @@
+/* Aplica margens e padding zerados para todos os elementos e define o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estiliza o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte geral */
+    background-color:#F1C27D; /* Cor de fundo da página */
+    padding: 20px; /* Espaçamento interno */
+}
+/* ________________________________________________________________________________________ */
+
+        /* DROPDOWN */
+/* estilo do menu do dropdown */
+nav{
+    background-color: #000000;
+    padding: 10px 0;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+position: relative; /* Necessário para o posicionamento do dropdown */
+margin: 0 15px;
+}
+
+nav ul li a{
+    color: #F1C27D;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    /* Torna o link clicável em toda a área */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover{
+    color:#C0C0C0;
+}
+
+/* estilo do dropdown */
+nav ul li .dropdown-content{
+    display: none; /* Esconde o menu inicialmente */
+    position: absolute; /* Posiciona o submenu em relação ao item pai */
+    background-color: #000000;
+    box-shadow: 0px 8px 16px 0px #F1C27D;
+    z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+    min-height: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li{
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a{
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover{
+    background-color: #000000; /* Cor de fundo ao passar o mouse sobre o menu */
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item principal */
+nav ul li:hover .dropdown-content{
+    display: block;
+}
+
+/* Logo */
+.logo img{
+    position: absolute;
+    margin-right: auto;
+    margin-left: 100px; /* Margem para trazer ele para o lado direito */
+    margin-top: 10px 10px 30px 20px;
+    padding: 4px;
+    width: 40px;
+    border-radius: 24px; /* Colocar borda redonda */
+}
+/* _____________________________________________________________________________________________ */
+
+
+/* Estiliza o cabeçalho */
+/* Estiliza a seção do produto */
+.produto {
+    display: flex; /* Usa o flexbox para organizar o layout */
+    justify-content: space-around; /* Distribui o espaço entre os elementos */
+    background-color: #fff; /* Cor de fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do elemento */
+}
+
+/* Estiliza a div que contém as imagens do produto */
+.imagens-produto {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+}
+
+/* Estiliza a imagem principal do produto */
+.imagem-principal {
+    width: 100%; /* A imagem ocupa 100% da largura da div */
+    max-width: 400px; /* Define um tamanho máximo para a imagem */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estiliza as miniaturas das imagens */
+.miniaturas img {
+    width: 70px; /* Largura fixa das miniaturas */
+    margin-right: 10px; /* Espaçamento entre as miniaturas */
+    cursor: pointer; /* O cursor muda para pointer ao passar sobre as miniaturas */
+}
+
+/* Estiliza a div que contém os detalhes do produto */
+.detalhes-produto {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+}
+
+/* Estiliza o nome do produto */
+h2 {
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estiliza a descrição do produto */
+.descricao {
+    color: #555; /* Cor mais clara para a descrição */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Estiliza o preço do produto */
+.preco {
+    color: #e74c3c; /* Cor vermelha para o preço */
+    font-size: 24px; /* Tamanho maior para destacar */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estiliza o formulário de opções de compra */
+.opcoes-compra {
+    display: flex; /* Organiza em colunas usando flexbox */
+    flex-direction: column; /* As opções ficam uma abaixo da outra */
+}
+
+/* Estiliza os rótulos (labels) dos selects */
+label {
+    margin-bottom: 5px; /* Espaçamento inferior */
+    font-weight: bold; /* Negrito para o texto */
+}
+
+/* Estiliza os campos de seleção (selects) */
+select {
+    padding: 8px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ddd; /* Borda cinza clara */
+}
+
+/* Estiliza o botão de compra */
+button {
+    padding: 10px; /* Espaçamento interno */
+    background-color: #27ae60; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto branco */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de pointer ao passar sobre o botão */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estiliza o botão ao passar o mouse (hover) */
+button:hover {
+    background-color: #2ecc71; /* Cor verde mais clara */
+}
+
+/* Estiliza a seção de comentários */
+.comentarios {
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estiliza cada comentário */
+.comentario {
+    display: flex; /* Exibe a foto e o texto lado a lado */
+    align-items: center; /* Alinha a foto e o texto verticalmente */
+    background-color: #fff; /* Fundo branco */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do comentário */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estiliza a foto do usuário */
+.foto-usuario {
+    width: 50px; /* Largura da foto */
+    height: 50px; /* Altura da foto */
+    border-radius: 50%; /* Deixa a imagem redonda */
+    margin-right: 15px; /* Espaçamento à direita da foto */
+}
+/* Estiliza o texto dos comentários */
+.comentario p {
+    color: #333
+}
+
+/* _____________________________________________________________________________________________ */
+
+        /* FOOTER */
+        footer{
+            background-color: #000000; /* Cor de fundo da página */
+            color: #C0C0C0; /* Cor da fonte */
+            padding: 40px 0; /* (Sequência: cima, direita, baixo, esquerda) */
+            /* Padding:recuo da borda para dentro - Margin:recuo da borda para fora*/
+            font-family: Georgia, Times, 'Times New Roman', serif; /* Estilo da fonte */
+        }
+        
+        /* O footer a seguir tem um "." e não é igual o de cima, por que ele tem class */
+        .footer-content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        }
+        
+        .footer-section{
+            flex-basis: 23%; /* Faz com que as seções ocupem 23% da largura, com espaço para margens */
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h4{ /* Estilo dos títulos */
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #F1C27D;
+        }
+        
+        .footer-section p, .footer-section ul{
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .footer-section ul{
+            list-style-type: none;
+        }
+        
+        .footer-section ul li{
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a{
+            color: #F1C27D;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover{
+            color: #F1C27D;
+        }
+        
+        .social-links a{
+            display: inline-block;
+            margin-right: 10px;
+            color:  #C0C0C0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover{
+            color: #F1C27D;
+        }
+        
+        .footer-bottom{
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            border-top: 1px solid #000000;
+            font-size: 14px;
+        }
+        
+        .footer-bottom p{
+            margin: 0;
+        }
+        
+        /* __________________________________________________________________________________________ */
